@@ -13,9 +13,20 @@ sources:
             description: a data de compra
           - name: orders_id
             description: id de cada compra realizada / sendo único para cada compra
+            
           - name: products_id
-            description: id de cada produto / repetindo-se sempre que o mesmo produto é comprado
+            description: id de cada produto 
+                  
+                  
       - name: raw_gz_product
         identifier: raw_gz_product
+        columns:
+          - name: products_id
+            description: id de cada produto 
+            tests:
+              - unique
+              - not_null 
+
+
       - name: raw_gz_ship
         identifier: raw_gz_ship
